@@ -1,0 +1,182 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2018-05-16T13:39:12.723Z",
+    "end": "2018-05-16T13:39:17.816Z",
+    "duration": 5093,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "46c0eae5-3b8d-406e-84f6-e437375a90d5",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [
+      {
+        "title": "\"after all\" hook",
+        "fullTitle": "\"after all\" hook",
+        "timedOut": false,
+        "duration": 0,
+        "pass": false,
+        "fail": false,
+        "pending": false,
+        "code": "if (seleniumServer) {\n  return seleniumServer.kill();\n}",
+        "err": {},
+        "isRoot": true,
+        "uuid": "6a6f5d0a-58fd-4e4a-9bc1-211e85b3cd65",
+        "isHook": true,
+        "skipped": false
+      }
+    ],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "602e98c7-f19c-4515-a11f-3d51d76878ce",
+        "title": "[chrome]",
+        "fullFile": "D:\\Dev\\autotestExample\\test\\library.test.js",
+        "file": "\\library.test.js",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [],
+        "suites": [
+          {
+            "uuid": "7d595deb-9842-45b8-9561-10f57a05b9b1",
+            "title": "library-app.firebaseapp.com",
+            "fullFile": "D:\\Dev\\autotestExample\\test\\library.test.js",
+            "file": "\\library.test.js",
+            "beforeHooks": [
+              {
+                "title": "\"before all\" hook",
+                "fullTitle": "[chrome] library-app.firebaseapp.com \"before all\" hook",
+                "timedOut": false,
+                "duration": 1962,
+                "pass": false,
+                "fail": false,
+                "pending": false,
+                "code": "driver = await env.builder().build();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "2668ea2d-daa8-4ca6-ba6b-48ca8853cf8d",
+                "isHook": true,
+                "skipped": false
+              }
+            ],
+            "afterHooks": [
+              {
+                "title": "\"after all\" hook",
+                "fullTitle": "[chrome] library-app.firebaseapp.com \"after all\" hook",
+                "timedOut": false,
+                "duration": 110,
+                "pass": false,
+                "fail": false,
+                "pending": false,
+                "code": "driver.quit()",
+                "err": {},
+                "isRoot": false,
+                "uuid": "11c25dda-349e-4169-af91-929290899c5a",
+                "isHook": true,
+                "skipped": false
+              }
+            ],
+            "tests": [
+              {
+                "title": "find input",
+                "fullTitle": "[chrome] library-app.firebaseapp.com find input",
+                "timedOut": false,
+                "duration": 1442,
+                "state": "passed",
+                "speed": "slow",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "await driver.get('http://library-app.firebaseapp.com');\n\t\t\tawait driver.findElement(By.css('input'));",
+                "err": {},
+                "isRoot": false,
+                "uuid": "0efbc0d6-1d9e-4cd3-bb89-a26db7113bc5",
+                "isHook": false,
+                "skipped": false
+              },
+              {
+                "title": "find input and sendKeys user@gmail.com",
+                "fullTitle": "[chrome] library-app.firebaseapp.com find input and sendKeys user@gmail.com",
+                "timedOut": false,
+                "duration": 280,
+                "state": "passed",
+                "speed": "slow",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "await driver.get('http://library-app.firebaseapp.com');\n\t\t\tawait driver.findElement(By.css('input'));\n\t\t\tawait driver.findElement(By.css('input')).sendKeys('user@gmail.com');",
+                "err": {},
+                "isRoot": false,
+                "uuid": "99141cc6-29e6-46d6-a2bf-29469c1764c4",
+                "isHook": false,
+                "skipped": false
+              },
+              {
+                "title": "find input and sendKeys user@gmail.com and click button",
+                "fullTitle": "[chrome] library-app.firebaseapp.com find input and sendKeys user@gmail.com and click button",
+                "timedOut": false,
+                "duration": 1282,
+                "state": "passed",
+                "speed": "slow",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "await driver.get('http://library-app.firebaseapp.com');\n\t\t\tawait driver.findElement(By.css('input')).sendKeys('user@gmail.com');\n\t\t\tawait driver.findElement(By.css('.btn-lg')).click();\n\t\t\n\t\t\tawait driver.wait(until.elementsLocated({css: '.alert-success'}), 10000); // Ждем Элемент, покгда он появится, берем его текст\n\n\t\t\tawait driver.findElement({css: '.alert-success'}).getText()\n\t\t\t.then( resolve => {\n\t\t\tconsole.log(`${resolve} Это ответ: `);\n\t\t},\n\t\t\terr => {\n\t\t\t\tconsole.log(`${err} Это ошибка: `);\n\t\t\t});",
+                "err": {},
+                "isRoot": false,
+                "uuid": "cb723ee2-eba6-4965-b84b-5779816b6e3f",
+                "isHook": false,
+                "skipped": false
+              }
+            ],
+            "suites": [],
+            "passes": [
+              "0efbc0d6-1d9e-4cd3-bb89-a26db7113bc5",
+              "99141cc6-29e6-46d6-a2bf-29469c1764c4",
+              "cb723ee2-eba6-4965-b84b-5779816b6e3f"
+            ],
+            "failures": [],
+            "pending": [],
+            "skipped": [],
+            "duration": 3004,
+            "root": false,
+            "rootEmpty": false,
+            "_timeout": 25000
+          }
+        ],
+        "passes": [],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 0,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2018
+}

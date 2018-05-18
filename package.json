@@ -1,0 +1,19 @@
+{
+  "name": "autotestexample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test_1.js",
+  "dependencies": {
+    "mocha": "^5.1.1",
+    "selenium-webdriver": "^4.0.0-alpha.1"
+  },
+  "devDependencies": {
+    "chromedriver": "^2.38.3",
+    "mochawesome": "^3.0.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC"
+}
